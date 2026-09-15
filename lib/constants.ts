@@ -16,7 +16,7 @@ export const DEPARTEMENT = "Indre-et-Loire";
 export const ZONE = "Monnaie et un rayon de 30 km : Tours, Vouvray, Neuillé-Pont-Pierre, Château-la-Vallière, Semblançay";
 export const SECTEUR = "Plomberie, chauffage et climatisation";
 
-export const SITE_URL = process.env.SITE_URL ?? "https://ma-plomberie-monnaie.fr";
+export const SITE_URL = process.env.SITE_URL || "https://ma-plomberie-monnaie.fr";
 
 export const COULEUR_PRIMAIRE = "#0B1330";
 export const COULEUR_ACCENT_ROUGE = "#DC2626";
