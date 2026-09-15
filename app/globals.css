@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-red: #dc2626;
+  --color-accent-blue: #2563eb;
+  --color-navy: #0b1330;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy);
+}
