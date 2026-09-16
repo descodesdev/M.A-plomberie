@@ -31,7 +31,7 @@ export default function HeroSection() {
         className="pointer-events-none absolute -bottom-40 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent-blue/20 blur-3xl"
       />
 
-      <div className="relative mx-auto max-w-3xl">
+      <div className="absolute left-1/2 top-[15px] w-full max-w-3xl -translate-x-1/2 px-4 sm:px-6">
         <p
           className={`${caveat.className} text-[3.15rem] text-white sm:text-[3.9375rem] md:text-[4.725rem]`}
         >
