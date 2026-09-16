@@ -33,7 +33,7 @@ export default function HeroSection() {
 
       <div className="relative mx-auto max-w-3xl">
         <p
-          className={`${caveat.className} text-5xl text-white sm:text-6xl md:text-7xl`}
+          className={`${caveat.className} text-[3.15rem] text-white sm:text-[3.9375rem] md:text-[4.725rem]`}
         >
           {NOM_ENTREPRISE}
         </p>
