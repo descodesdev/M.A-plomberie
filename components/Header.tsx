@@ -14,6 +14,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,8 +32,23 @@ export default function Header() {
     }
   }, [open]);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 40);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0B1330]/90 backdrop-blur-md">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled || open
+          ? "border-b border-white/10 bg-[#0B1330]/90 backdrop-blur-md"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
         <a href="#hero" className="flex items-center gap-2" aria-label={NOM_ENTREPRISE}>
           <Image
