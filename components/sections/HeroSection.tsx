@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { Caveat } from "next/font/google";
 import { Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { HERO_SUBTITLE, HERO_TITLE, PHONE_E164, ZONE } from "@/lib/constants";
+import { HERO_SUBTITLE, HERO_TITLE, NOM_ENTREPRISE, PHONE_E164, ZONE } from "@/lib/constants";
+
+const caveat = Caveat({ subsets: ["latin"], weight: ["600", "700"] });
 
 export default function HeroSection() {
   return (
@@ -29,7 +32,12 @@ export default function HeroSection() {
       />
 
       <div className="relative mx-auto max-w-3xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent-blue">
+        <p
+          className={`${caveat.className} text-5xl text-white sm:text-6xl md:text-7xl`}
+        >
+          {NOM_ENTREPRISE}
+        </p>
+        <p className="mb-4 mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-accent-blue">
           Plombier — Chauffage — Climatisation
         </p>
         <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">{HERO_TITLE}</h1>
