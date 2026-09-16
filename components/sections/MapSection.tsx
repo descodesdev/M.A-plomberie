@@ -14,7 +14,7 @@ export default function MapSection() {
             title={`Carte Google Maps — ${VILLE}`}
             src={GOOGLE_MAPS_EMBED_SRC}
             width="100%"
-            height="400"
+            height="480"
             style={{ border: 0 }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
