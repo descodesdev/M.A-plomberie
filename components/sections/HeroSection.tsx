@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { HERO_SUBTITLE, HERO_TITLE, PHONE_E164, ZONE } from "@/lib/constants";
@@ -8,6 +9,16 @@ export default function HeroSection() {
       id="hero"
       className="relative flex min-h-[90vh] items-center justify-center overflow-hidden bg-[#0B1330] px-4 pt-16 text-center sm:px-6"
     >
+      <Image
+        src="/hero-plombier.png"
+        alt="Plombier resserrant un raccord de chauffage avec une clé à molette"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[70%_center]"
+      />
+      <div aria-hidden="true" className="absolute inset-0 bg-[#0B1330]/75" />
+
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent-red/20 blur-3xl"
