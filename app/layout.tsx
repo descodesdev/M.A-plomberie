@@ -3,7 +3,11 @@ import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import {
+  ADRESSE_RUE,
+  CODE_POSTAL,
   EMAIL,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
   NOM_ENTREPRISE,
   PHONE_DISPLAY,
   SITE_URL,
@@ -45,11 +49,27 @@ export default async function RootLayout({
     areaServed: ZONE,
     address: {
       "@type": "PostalAddress",
+      streetAddress: ADRESSE_RUE,
       addressLocality: VILLE,
-      postalCode: "37380",
+      postalCode: CODE_POSTAL,
       addressRegion: "Indre-et-Loire",
       addressCountry: "FR",
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday"],
+        opens: "09:00",
+        closes: "13:00",
+      },
+    ],
+    sameAs: [INSTAGRAM_URL, FACEBOOK_URL],
     url: SITE_URL,
   };
 

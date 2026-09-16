@@ -10,11 +10,26 @@ export const ASSURANCE_RCP = "[À COMPLÉTER PAR LE CLIENT — assureur, n° de 
 export const PHONE_DISPLAY = "06 16 99 38 51";
 export const PHONE_E164 = "+33616993851";
 export const EMAIL = "m.aplomberie@hotmail.com";
+export const ADRESSE_RUE = "419 Rte du Fresne";
 export const VILLE = "Monnaie";
 export const CODE_POSTAL = "37380";
 export const DEPARTEMENT = "Indre-et-Loire";
 export const ZONE = "Monnaie et un rayon de 30 km : Tours, Vouvray, Neuillé-Pont-Pierre, Château-la-Vallière, Semblançay";
 export const SECTEUR = "Plomberie, chauffage et climatisation";
+
+export const INSTAGRAM_URL = "https://instagram.com/maplomberie37380";
+export const FACEBOOK_URL = "https://facebook.com/M.A%20Plomberie";
+
+export type HoraireJour = {
+  jours: string;
+  horaire: string;
+};
+
+export const HORAIRES: readonly HoraireJour[] = [
+  { jours: "Du lundi au vendredi", horaire: "8h00 - 17h00" },
+  { jours: "Samedi", horaire: "9h00 - 13h00" },
+  { jours: "Dimanche", horaire: "Fermé" },
+] as const;
 
 export const SITE_URL = process.env.SITE_URL || "https://ma-plomberie-monnaie.fr";
 
@@ -26,7 +41,7 @@ export const DESCODES_URL = "https://www.descodes.com";
 
 export const GOOGLE_MAPS_EMBED_SRC =
   "https://www.google.com/maps?q=" +
-  encodeURIComponent(`${VILLE} ${CODE_POSTAL} ${DEPARTEMENT}`) +
+  encodeURIComponent(`${ADRESSE_RUE}, ${CODE_POSTAL} ${VILLE}, France`) +
   "&output=embed";
 
 export const HERO_TITLE = "Votre plombier de confiance à Monnaie";

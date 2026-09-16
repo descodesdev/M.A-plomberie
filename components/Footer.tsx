@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  ADRESSE_RUE,
   DESCODES_URL,
   EMAIL,
   NOM_ENTREPRISE,
@@ -19,6 +20,8 @@ export default function Footer() {
               {NOM_ENTREPRISE.toUpperCase()}
             </p>
             <p className="mt-2">
+              {ADRESSE_RUE}
+              <br />
               {CODE_POSTAL} {VILLE} — Indre-et-Loire
             </p>
           </div>
