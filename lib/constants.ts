@@ -119,8 +119,8 @@ export type GalleryImage = {
 export const GALLERY_IMAGES: readonly GalleryImage[] = [
   {
     id: 1,
-    src: "https://images.pexels.com/photos/5463581/pexels-photo-5463581.jpeg?auto=compress&cs=tinysrgb&w=800",
-    alt: "Technicien réparant une unité de climatisation extérieure",
+    src: "https://primary.jwwb.nl/public/v/l/w/temp-hyfmprqyktinzrmwddcw/669569623_122110988823252805_1032832045261568169_n-high.jpg?enable-io=true&crop=1.4286%3A1%2Coffset-x98&width=1920",
+    alt: "Rénovation d'une salle de bain",
   },
   {
     id: 2,
