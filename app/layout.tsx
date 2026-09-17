@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import UnderConstructionOverlay from "@/components/UnderConstructionOverlay";
 import {
   ADRESSE_RUE,
   CODE_POSTAL,
@@ -77,6 +78,8 @@ export default async function RootLayout({
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-[#0B1330] font-sans text-white antialiased">
         {children}
+        {/* SUPPRIMER ce bloc quand le client valide le site définitivement */}
+        <UnderConstructionOverlay />
         <script
           type="application/ld+json"
           nonce={nonce}
