@@ -11,7 +11,7 @@ export default function UnderConstructionOverlay() {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 z-[9999] overflow-hidden bg-[#0B1330]/90 backdrop-blur-2xl"
+      className="fixed inset-0 z-[9999] overflow-hidden bg-[#0B1330]/70 backdrop-blur-2xl"
     >
       <div className="absolute -inset-[30%] flex rotate-[-10deg] flex-wrap content-center justify-center gap-x-14 gap-y-10">
         {Array.from({ length: TILE_COUNT }).map((_, i) => (
