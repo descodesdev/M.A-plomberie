@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Caveat } from "next/font/google";
 import { Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { HERO_SUBTITLE, HERO_TITLE, NOM_ENTREPRISE, PHONE_E164, ZONE } from "@/lib/constants";
+import { HERO_SUBTITLE, HERO_TITLE, NOM_ENTREPRISE, PHONE_E164 } from "@/lib/constants";
 
 const caveat = Caveat({ subsets: ["latin"], weight: ["600", "700"] });
 
@@ -43,7 +43,6 @@ export default function HeroSection() {
           </p>
           <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">{HERO_TITLE}</h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/70 sm:mx-0">{HERO_SUBTITLE}</p>
-          <p className="mt-2 text-sm text-white/50">{ZONE}</p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:justify-start">
             <Button href={`tel:${PHONE_E164}`} variant="primary">

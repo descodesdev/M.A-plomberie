@@ -1,4 +1,4 @@
-import { GOOGLE_MAPS_EMBED_SRC, VILLE, ZONE } from "@/lib/constants";
+import { GOOGLE_MAPS_EMBED_SRC, VILLE } from "@/lib/constants";
 
 export default function MapSection() {
   return (
@@ -7,7 +7,6 @@ export default function MapSection() {
         <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
           Zone d&apos;intervention
         </h2>
-        <p className="mx-auto mt-3 max-w-xl text-center text-white/60">{ZONE}</p>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
           <iframe

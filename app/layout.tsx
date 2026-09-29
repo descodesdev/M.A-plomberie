@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import UnderConstructionOverlay from "@/components/UnderConstructionOverlay";
 import {
   ADRESSE_RUE,
   CODE_POSTAL,
@@ -13,7 +12,6 @@ import {
   PHONE_DISPLAY,
   SITE_URL,
   VILLE,
-  ZONE,
 } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -21,7 +19,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `${NOM_ENTREPRISE} — Plombier chauffagiste à ${VILLE} (37)`,
-  description: `Plombier à ${VILLE}, Indre-et-Loire. Plomberie, chauffage et climatisation. Devis gratuit. ${ZONE}. Tél. ${PHONE_DISPLAY}.`,
+  description: `Plombier à ${VILLE}, Indre-et-Loire. Plomberie, chauffage et climatisation. Devis gratuit. Tél. ${PHONE_DISPLAY}.`,
   keywords: ["plombier Monnaie", "plomberie Indre-et-Loire", "chauffagiste Tours", "climatisation Monnaie"],
   openGraph: {
     title: `${NOM_ENTREPRISE} — Plombier chauffagiste à ${VILLE}`,
@@ -47,7 +45,6 @@ export default async function RootLayout({
     name: NOM_ENTREPRISE,
     telephone: PHONE_DISPLAY,
     email: EMAIL,
-    areaServed: ZONE,
     address: {
       "@type": "PostalAddress",
       streetAddress: ADRESSE_RUE,
@@ -78,8 +75,6 @@ export default async function RootLayout({
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-[#0B1330] font-sans text-white antialiased">
         {children}
-        {/* SUPPRIMER ce bloc quand le client valide le site définitivement */}
-        <UnderConstructionOverlay />
         <script
           type="application/ld+json"
           nonce={nonce}

@@ -14,7 +14,6 @@ export const ADRESSE_RUE = "419 Rte du Fresne";
 export const VILLE = "Monnaie";
 export const CODE_POSTAL = "37380";
 export const DEPARTEMENT = "Indre-et-Loire";
-export const ZONE = "Monnaie et un rayon de 30 km : Tours, Vouvray, Neuillé-Pont-Pierre, Château-la-Vallière, Semblançay";
 export const SECTEUR = "Plomberie, chauffage et climatisation";
 
 export const INSTAGRAM_URL = "https://instagram.com/maplomberie37380";
