@@ -5,7 +5,7 @@ export default function MapSection() {
     <section id="zone" className="bg-[#070B1F] px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-center text-3xl font-bold text-white sm:text-4xl">
-          Zone d&apos;intervention
+          Localisation
         </h2>
 
         <div className="mt-10 overflow-hidden rounded-2xl border border-white/10">
