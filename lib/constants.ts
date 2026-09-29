@@ -40,8 +40,8 @@ export const DESCODES_URL = "https://www.descodes.com";
 
 export const GOOGLE_MAPS_EMBED_SRC =
   "https://www.google.com/maps?q=" +
-  encodeURIComponent(`${VILLE} ${CODE_POSTAL} ${DEPARTEMENT}`) +
-  "&z=10&output=embed";
+  encodeURIComponent(`${ADRESSE_RUE}, ${CODE_POSTAL} ${VILLE}, France`) +
+  "&z=13&output=embed";
 
 export const HERO_TITLE = "Votre plombier de confiance à Monnaie";
 export const HERO_SUBTITLE =
