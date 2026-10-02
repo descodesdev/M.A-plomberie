@@ -3,6 +3,7 @@ import {
   ADRESSE_RUE,
   DESCODES_URL,
   EMAIL,
+  GOOGLE_MAPS_URL,
   NOM_ENTREPRISE,
   PHONE_DISPLAY,
   PHONE_E164,
@@ -20,9 +21,11 @@ export default function Footer() {
               {NOM_ENTREPRISE.toUpperCase()}
             </p>
             <p className="mt-2">
-              {ADRESSE_RUE}
-              <br />
-              {CODE_POSTAL} {VILLE} — Indre-et-Loire
+              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                {ADRESSE_RUE}
+                <br />
+                {CODE_POSTAL} {VILLE} — Indre-et-Loire
+              </a>
             </p>
           </div>
 

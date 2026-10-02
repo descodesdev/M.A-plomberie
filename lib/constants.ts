@@ -43,6 +43,10 @@ export const GOOGLE_MAPS_EMBED_SRC =
   encodeURIComponent(`${ADRESSE_RUE}, ${CODE_POSTAL} ${VILLE}, France`) +
   "&z=13&output=embed";
 
+export const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent(`${ADRESSE_RUE}, ${CODE_POSTAL} ${VILLE}, France`);
+
 export const HERO_TITLE = "Votre plombier de confiance à Monnaie";
 export const HERO_SUBTITLE =
   "Plomberie, chauffage et climatisation. Interventions soignées et devis gratuit dans le secteur de Monnaie et ses environs.";

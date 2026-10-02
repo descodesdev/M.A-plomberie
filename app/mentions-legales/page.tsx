@@ -7,6 +7,7 @@ import {
   CODE_POSTAL,
   EMAIL,
   FORME_JURIDIQUE,
+  GOOGLE_MAPS_URL,
   NOM_DIRIGEANT,
   NOM_ENTREPRISE,
   PHONE_DISPLAY,
@@ -33,7 +34,12 @@ export default function MentionsLegales() {
           <p>Dénomination : {NOM_ENTREPRISE}</p>
           <p>Nom du dirigeant : {NOM_DIRIGEANT}</p>
           <p>Forme juridique : {FORME_JURIDIQUE}</p>
-          <p>Adresse : {CODE_POSTAL} {VILLE}, France</p>
+          <p>
+            Adresse :{" "}
+            <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">
+              {CODE_POSTAL} {VILLE}, France
+            </a>
+          </p>
           <p>SIRET : {SIRET}</p>
           <p>SIREN : {SIREN} — immatriculé au Répertoire National des Entreprises (RNE)</p>
           <p>Code APE/NAF : {CODE_NAF}</p>

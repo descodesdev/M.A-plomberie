@@ -4,6 +4,7 @@ import {
   CODE_POSTAL,
   EMAIL,
   FACEBOOK_URL,
+  GOOGLE_MAPS_URL,
   HORAIRES,
   INSTAGRAM_URL,
   NOM_ENTREPRISE,
@@ -29,9 +30,16 @@ export default function ContactSection() {
             <p>
               {NOM_ENTREPRISE}
               <br />
-              {ADRESSE_RUE}
-              <br />
-              {CODE_POSTAL} {VILLE}, France
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white hover:underline"
+              >
+                {ADRESSE_RUE}
+                <br />
+                {CODE_POSTAL} {VILLE}, France
+              </a>
             </p>
           </div>
 
