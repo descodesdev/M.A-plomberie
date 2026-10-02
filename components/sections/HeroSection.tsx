@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Caveat } from "next/font/google";
 import { Phone } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { HERO_SUBTITLE, HERO_TITLE, NOM_ENTREPRISE, PHONE_E164 } from "@/lib/constants";
+import { EMAIL, HERO_SUBTITLE, HERO_TITLE, NOM_ENTREPRISE, PHONE_E164 } from "@/lib/constants";
 
 const caveat = Caveat({ subsets: ["latin"], weight: ["600", "700"] });
 
@@ -49,7 +49,10 @@ export default function HeroSection() {
               <Phone size={18} aria-hidden="true" />
               Appeler maintenant
             </Button>
-            <Button href="#contact" variant="secondary">
+            <Button
+              href={`mailto:${EMAIL}?subject=${encodeURIComponent("Demande de devis")}`}
+              variant="secondary"
+            >
               Demander un devis gratuit
             </Button>
           </div>
