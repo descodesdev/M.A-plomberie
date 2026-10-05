@@ -39,8 +39,9 @@ export default function HeroSection() {
             {NOM_ENTREPRISE}
           </p>
           <p className="mb-4 mt-2 text-sm font-semibold uppercase tracking-[0.3em]">
-            <span className="text-accent-red">Plombier — Chauffage —</span>{" "}
-            <span className="text-accent-blue">Climatisation</span>
+            <span className="text-accent-red">Plombier —</span>{" "}
+            <span className="text-accent-blue">Climatisation</span>{" "}
+            <span className="text-accent-red">— Chauffage</span>
           </p>
           <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">{HERO_TITLE}</h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/70 sm:mx-0">{HERO_SUBTITLE}</p>
