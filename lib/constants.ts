@@ -30,7 +30,7 @@ export const HORAIRES: readonly HoraireJour[] = [
   { jours: "Dimanche", horaire: "Fermé" },
 ] as const;
 
-export const SITE_URL = process.env.SITE_URL || "https://ma-plomberie-monnaie.fr";
+export const SITE_URL = process.env.SITE_URL || "https://www.ma-plomberie37.fr";
 
 export const COULEUR_PRIMAIRE = "#0B1330";
 export const COULEUR_ACCENT_ROUGE = "#DC2626";
