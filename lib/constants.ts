@@ -32,6 +32,8 @@ export const HORAIRES: readonly HoraireJour[] = [
 
 export const SITE_URL = process.env.SITE_URL || "https://www.ma-plomberie37.fr";
 
+export const GA_MEASUREMENT_ID = "G-6B3TS5W81C";
+
 export const COULEUR_PRIMAIRE = "#0B1330";
 export const COULEUR_ACCENT_ROUGE = "#DC2626";
 export const COULEUR_ACCENT_BLEU = "#2563EB";

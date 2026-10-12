@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import {
   ADRESSE_RUE,
   CODE_POSTAL,
   EMAIL,
   FACEBOOK_URL,
+  GA_MEASUREMENT_ID,
   INSTAGRAM_URL,
   NOM_ENTREPRISE,
   PHONE_DISPLAY,
@@ -100,6 +102,19 @@ export default async function RootLayout({
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-[#0B1330] font-sans text-white antialiased">
         {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+          nonce={nonce}
+        />
+        <Script id="google-analytics" strategy="afterInteractive" nonce={nonce}>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           nonce={nonce}
