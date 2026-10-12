@@ -18,12 +18,19 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${NOM_ENTREPRISE} — Plombier chauffagiste à ${VILLE} (37)`,
-  description: `Plombier à ${VILLE}, Indre-et-Loire. Plomberie, chauffage et climatisation. Devis gratuit. Tél. ${PHONE_DISPLAY}.`,
-  keywords: ["plombier Monnaie", "plomberie Indre-et-Loire", "chauffagiste Tours", "climatisation Monnaie"],
+  title: `${NOM_ENTREPRISE} — Plombier & dépannage climatisation à ${VILLE} (37)`,
+  description: `Plombier et dépanneur climatisation à ${VILLE}, Indre-et-Loire. Plomberie, chauffage, climatisation. Devis gratuit. Tél. ${PHONE_DISPLAY}.`,
+  keywords: [
+    "plombier Monnaie",
+    "plomberie Indre-et-Loire",
+    "chauffagiste Tours",
+    "climatisation Monnaie",
+    "dépanneur climatisation Monnaie 37",
+    "dépannage climatisation Monnaie",
+  ],
   openGraph: {
-    title: `${NOM_ENTREPRISE} — Plombier chauffagiste à ${VILLE}`,
-    description: `Plomberie, chauffage et climatisation à ${VILLE} et ses environs. Devis gratuit.`,
+    title: `${NOM_ENTREPRISE} — Plombier & dépannage climatisation à ${VILLE}`,
+    description: `Plomberie, chauffage et dépannage climatisation à ${VILLE} et ses environs. Devis gratuit.`,
     url: SITE_URL,
     siteName: NOM_ENTREPRISE,
     locale: "fr_FR",
@@ -41,7 +48,7 @@ export default async function RootLayout({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Plumber",
+    "@type": ["Plumber", "HVACBusiness"],
     name: NOM_ENTREPRISE,
     telephone: PHONE_DISPLAY,
     email: EMAIL,
@@ -52,6 +59,24 @@ export default async function RootLayout({
       postalCode: CODE_POSTAL,
       addressRegion: "Indre-et-Loire",
       addressCountry: "FR",
+    },
+    areaServed: [
+      { "@type": "City", name: "Monnaie" },
+      { "@type": "AdministrativeArea", name: "Indre-et-Loire" },
+      { "@type": "City", name: "Tours" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plomberie générale" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Chauffage" } },
+        {
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: "Installation et dépannage climatisation" },
+        },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Dépannage plomberie et chauffage" } },
+      ],
     },
     openingHoursSpecification: [
       {

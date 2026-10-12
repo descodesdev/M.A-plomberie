@@ -47,9 +47,9 @@ export const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=" +
   encodeURIComponent(`${ADRESSE_RUE}, ${CODE_POSTAL} ${VILLE}, France`);
 
-export const HERO_TITLE = "Votre plombier de confiance à Monnaie";
+export const HERO_TITLE = "Plombier & dépannage climatisation à Monnaie (37)";
 export const HERO_SUBTITLE =
-  "Plomberie, chauffage et climatisation. Interventions soignées et devis gratuit dans le secteur de Monnaie et ses environs.";
+  "Plomberie, chauffage et dépannage climatisation. Interventions rapides et devis gratuit à Monnaie et dans tout le secteur (Tours, Indre-et-Loire).";
 
 export type Service = {
   id: number;
@@ -78,14 +78,14 @@ export const SERVICES: readonly Service[] = [
     icon: "snowflake",
     title: "Climatisation",
     description:
-      "Pose et maintenance de climatiseurs adaptés à votre logement, pour un intérieur frais en toute saison.",
+      "Installation, entretien et dépannage de climatiseurs adaptés à votre logement, pour un intérieur frais en toute saison.",
   },
   {
     id: 4,
     icon: "droplet",
     title: "Dépannage",
     description:
-      "Diagnostic rapide et intervention sur vos pannes de plomberie ou de chauffage, avec devis gratuit.",
+      "Diagnostic rapide et intervention sur vos pannes de plomberie, de chauffage ou de climatisation, avec devis gratuit.",
   },
 ] as const;
 
